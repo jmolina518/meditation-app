@@ -13,7 +13,7 @@ const app = () => {
   const outlineLength = outline.getTotalLength();
   console.log(outlineLength);
   //Duration
-  let fakeDuration = 600;
+  let fakeDuration = 15;
 
   outline.style.strokeDasharray = outlineLength;
   outline.style.strokeDashoffset = outlineLength;
@@ -66,7 +66,7 @@ const app = () => {
     outline.style.strokeDashoffset = progress;
 
     //Animate the text
-    timeDisplay.textContent = `${minutes}:${seconds}`;
+    timeDisplay.textContent = `${seconds}`;
 
     if (currentTime >= fakeDuration) {
       song.pause();
